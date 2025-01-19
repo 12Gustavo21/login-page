@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #e9f035;
+  color: #1a202c;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ilustration-aside {
+  width: 50%;
+  height: 100vh;
+  background-color: #1b1d1e;
+  display: grid;
+  place-items: center;
+}
+
+@media only screen and (width <= 768px) {
+  .ilustration-aside {
+    display: none;
+  }
+}
+
+.ilustration {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.ilustration-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ilustration-header {
+  width: 60%;
+  height: 5%;
+  border-bottom: 0.1rem solid #272b2c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (width <= 1024px) {
+  .ilustration-header {
+    width: 90%;
+  }
+}
+
+.dots {
+  width: 22%;
+  height: 40%;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.dots span {
+  width: 100%;
+  height: 100%;
+}
+
+.dots span::before {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #3f3d56;
+}
+
+.menu {
+  width: 20%;
+  height: 70%;
+  padding-right: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.menu span {
+  width: 45%;
+  height: 100%;
+}
+
+.menu span::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 0.3rem;
+  background-color: #3f3d56;
+}
+
+.lines-box {
+  width: 100%;
+  height: 15%;
+  padding-top: 2rem;
+}
+
+.lines-box div {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lines-box div span {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lines-box div span:nth-child(1)::before {
+  width: 55%;
+}
+
+.lines-box div span:nth-child(2)::before {
+  width: 85%;
+}
+
+.lines-box div span::before {
+  content: "";
+  display: block;
+  height: 0.85rem;
+  border-radius: 0.3rem;
+  background-color: #272b2c;
+}
+
+@media only screen and (width <= 1024px) {
+  .lines-box div span {
+    width: 50%;
+  }
+}
+
+.persons {
+  width: 100%;
+  height: 30%;
+}
+
+.person-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  row-gap: 1rem;
+}
+
+.person figure {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  background-color: #202325;
+  border-radius: 100%;
+  padding: 0.6rem;
+}
+
+.person img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.person figure:nth-child(2) img {
+  width: 120%;
+  height: 120%;
+}
+
+@media only screen and (width <= 1024px) {
+  .person {
+    width: 100%;
+  }
+}
+
+.main-aside {
+  width: 50%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #181a1b;
+}
+
+@media only screen and (width <= 768px) {
+  .main-aside {
+    width: 100%;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header section {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header p {
+  font: 500 1.25rem/1.375rem "Merriweather", sans-serif;
+  color: #cacaca;
+}
+
+.header h1 {
+  font: 600 2rem/2.1875rem "Merriweather", sans-serif;
+  color: #cacaca;
+}
+
+@media only screen and (width <= 1115px) {
+  .header section {
+    width: 90%;
+  }
+}
+
+@media only screen and (width <= 768px) {
+  .header {
+    justify-content: flex-start;
+    padding: 2rem 0;
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+@media only screen and (width <= 768px) {
+  .main {
+    padding: 0 0 2rem 0;
+    height: 150%;
+  }
+}
+
+.main-content {
+  width: 50%;
+  height: 100%;
+}
+
+@media only screen and (width <= 1115px) {
+  .main-content {
+    width: 90%;
+  }
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media only screen and (width <= 768px) {
+  .form {
+    gap: 0;
+  }
+}
+
+.input-box {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-box div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-box div label {
+  width: 100%;
+  height: 30%;
+  font: 600 1.125rem/2.1875rem "Archivo", sans-serif;
+  color: #cacaca;
+}
+
+.input-box div input {
+  width: 100%;
+  height: 60%;
+  max-height: 4rem;
+  border: 0.05rem solid #313639;
+  border-radius: 0.4rem;
+  font: 400 1rem/1.0625rem "Merriweather", sans-serif;
+  background-color: #121212;
+  color: #cacaca;
+  outline: none;
+  padding-left: 1rem;
+}
+
+@media only screen and (width <= 768px) {
+  .input-box div {
+    height: 40%;
+  }
+}
+
+.remember-container {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remember {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.check-box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.check-box label,
+.check-box #remember {
+  cursor: pointer;
+}
+
+.check-box label {
+  font: 500 1rem/1.0625rem "Archivo", sans-serif;
+  color: #cacaca;
+}
+
+.check-box #remember {
+  width: 1rem;
+  height: 1rem;
+}
+
+.forget-password {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.forget-password a {
+  font: 500 1rem/1.0625rem "Archivo", sans-serif;
+  color: #e9f035;
+  text-decoration: none;
+}
+
+@media only screen and (width <= 355px) {
+  .forget-password a {
+    font-size: .9rem;
+  }
+}
+
+.button-box {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-box button {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.4rem;
+  font: 600 1rem/1.375rem "Archivo", sans-serif;
+  color: #1a202c;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0.05rem 0.05rem 0.05rem rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+@media only screen and (width <= 768px) {
+  .button-box {
+    height: 20%;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.enter-button {
+  background-color: #e9f035;
+}
+
+.enter-button:hover {
+  background-color: #ccd30c;
+}
+
+.enter-button.disabled {
+  background-color: #3f3d56;
+  cursor: not-allowed;
+  color: #cacaca;
+  opacity: 0.5;
+}
+
+.google-button {
+  background-color: #1a202c;
+  color: #cacaca !important;
+  gap: 1rem;
+}
+
+.google-button:hover {
+  background-color: #2d3748;
+}
+
+.footer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font: 500 1rem/1.36rem "Archivo", sans-serif;
+}
+
+.footer p {
+  color: #cacaca;
+}
+
+.footer a {
+  color: #e9f035;
+  text-decoration: none;
+}
+
+@media only screen and (width <= 768px) {
+  .footer {
+    height: 100%;
+    align-items: center;
+  }
+}
