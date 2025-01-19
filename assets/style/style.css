@@ -13,6 +13,84 @@ html {
   color: #1a202c;
 }
 
+.fade-up {
+  animation: fadeUp 1s ease;
+}
+
+.fade-down {
+  animation: fadeDown 1s ease;
+}
+
+.fade-right {
+  animation: fadeRight 1s ease;
+}
+
+.fade-left {
+  animation: fadeLeft 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.link-animation::before {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid #e9f035;
+  transform: scaleX(0);
+  position: relative;
+  top: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.link-animation:hover::before {
+  transform: scaleX(1);
+}
+
 .content {
   width: 100%;
   height: 100vh;
@@ -29,7 +107,7 @@ html {
   place-items: center;
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .ilustration-aside {
     display: none;
   }
@@ -60,7 +138,7 @@ html {
   align-items: center;
 }
 
-@media only screen and (width <= 1024px) {
+@media only screen and (width <=1024px) {
   .ilustration-header {
     width: 90%;
   }
@@ -77,6 +155,11 @@ html {
 .dots span {
   width: 100%;
   height: 100%;
+  transition: all 0.3s ease;
+}
+
+.dots span:hover {
+  transform: translateY(-.4rem);
 }
 
 .dots span::before {
@@ -100,6 +183,15 @@ html {
 .menu span {
   width: 45%;
   height: 100%;
+  transition: all 0.3s ease;
+}
+
+.menu:hover span:nth-child(1) {
+  transform: translateY(-.8rem);
+}
+
+.menu:hover span:nth-child(2) {
+  transform: translateY(-.4rem);
 }
 
 .menu span::before {
@@ -135,10 +227,20 @@ html {
 
 .lines-box div span:nth-child(1)::before {
   width: 55%;
+  transition: all 0.3s ease;
+}
+
+.lines-box div span:nth-child(1):hover::before {
+  width: 85%;
 }
 
 .lines-box div span:nth-child(2)::before {
+  transition: all 0.3s ease;
   width: 85%;
+}
+
+.lines-box div span:nth-child(2):hover::before {
+  width: 55%;
 }
 
 .lines-box div span::before {
@@ -149,7 +251,11 @@ html {
   background-color: #272b2c;
 }
 
-@media only screen and (width <= 1024px) {
+.lines-box div span.fade-up:nth-child(2) {
+  animation-duration: 2s;
+}
+
+@media only screen and (width <=1024px) {
   .lines-box div span {
     width: 50%;
   }
@@ -187,13 +293,25 @@ html {
   background-color: #202325;
   border-radius: 100%;
   padding: 0.6rem;
+  animation-duration: 3s;
 }
 
-.person img {
+.person figure:nth-child(4),
+.person figure:nth-child(5),
+.person figure:nth-child(6) {
+  animation-duration: 4s;
+}
+
+.person figure img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
+  transition: all 0.3s ease;
+}
+
+.person figure:hover img {
+  transform: scale(1.1);
 }
 
 .person figure:nth-child(2) img {
@@ -201,7 +319,7 @@ html {
   height: 120%;
 }
 
-@media only screen and (width <= 1024px) {
+@media only screen and (width <=1024px) {
   .person {
     width: 100%;
   }
@@ -215,7 +333,7 @@ html {
   background-color: #181a1b;
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .main-aside {
     width: 100%;
   }
@@ -231,11 +349,15 @@ html {
   gap: 0.5rem;
 }
 
-.header section {
+.header div {
   width: 50%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+}
+
+.header div:nth-last-child(1) {
+  animation-duration: 1.5s;
 }
 
 .header p {
@@ -248,13 +370,13 @@ html {
   color: #cacaca;
 }
 
-@media only screen and (width <= 1115px) {
+@media only screen and (width <=1115px) {
   .header section {
     width: 90%;
   }
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .header {
     justify-content: flex-start;
     padding: 2rem 0;
@@ -271,7 +393,7 @@ html {
   padding-top: 2rem;
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .main {
     padding: 0 0 2rem 0;
     height: 150%;
@@ -283,7 +405,7 @@ html {
   height: 100%;
 }
 
-@media only screen and (width <= 1115px) {
+@media only screen and (width <=1115px) {
   .main-content {
     width: 90%;
   }
@@ -297,7 +419,7 @@ html {
   gap: 1rem;
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .form {
     gap: 0;
   }
@@ -317,6 +439,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  animation-duration: 1.5s;
 }
 
 .input-box div label {
@@ -339,7 +462,7 @@ html {
   padding-left: 1rem;
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .input-box div {
     height: 40%;
   }
@@ -399,7 +522,7 @@ html {
   text-decoration: none;
 }
 
-@media only screen and (width <= 355px) {
+@media only screen and (width <=355px) {
   .forget-password a {
     font-size: .9rem;
   }
@@ -429,7 +552,7 @@ html {
   transition: all 0.3s ease;
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .button-box {
     height: 20%;
     justify-content: center;
@@ -446,10 +569,9 @@ html {
 }
 
 .enter-button.disabled {
-  background-color: #3f3d56;
+  background-color: #3f3d561d;
   cursor: not-allowed;
-  color: #cacaca;
-  opacity: 0.5;
+  color: #cacaca27;
 }
 
 .google-button {
@@ -468,11 +590,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font: 500 1rem/1.36rem "Archivo", sans-serif;
 }
 
-.footer p {
+.footer .footer-content {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #cacaca;
+  font: 500 1rem/1.36rem "Archivo", sans-serif;
 }
 
 .footer a {
@@ -480,7 +606,7 @@ html {
   text-decoration: none;
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .footer {
     height: 100%;
     align-items: center;
