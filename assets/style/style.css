@@ -462,6 +462,10 @@ html {
   padding-left: 1rem;
 }
 
+.input-box div input.error {
+  border-color: #ff0000;
+}
+
 @media only screen and (width <=768px) {
   .input-box div {
     height: 40%;
