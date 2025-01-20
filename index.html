@@ -11,14 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/style/style.css">
+  <script src="./assets/js/script.js" defer></script>
 </head>
 
 <body>
-  <section class="content">
-    <aside class="ilustration-aside">
-      <section class="ilustration-content">
-        <header class="ilustration-header">
-          <div class="dots fade-right">
+  <main class="content">
+    <aside class="illustration-aside">
+      <section class="illustration-content">
+        <header class="illustration-header">
+          <div class="header-dots fade-right">
             <span></span>
             <span></span>
             <span></span>
@@ -35,34 +36,34 @@
             <span class="fade-up"></span>
           </div>
         </div>
-        <main class="persons">
-          <div class="person-box">
-            <div class="person">
+        <div class="persons-box">
+          <div class="persons-content">
+            <div class="persons">
               <figure class="fade-up">
-                <img src="./assets/img/person-one.png" alt="Person One" draggable="false">
+                <img src="./assets/img/person-one.png" alt="Ilustração de uma pessoa 1" draggable="false">
               </figure>
               <figure class="fade-up">
-                <img src="./assets/img/person-two.png" alt="Person Two" draggable="false">
+                <img src="./assets/img/person-two.png" alt="Ilustração de uma pessoa 2" draggable="false">
               </figure>
               <figure class="fade-up">
-                <img src="./assets/img/person-three.png" alt="Person Three" draggable="false">
+                <img src="./assets/img/person-three.png" alt="Ilustração de uma pessoa 3" draggable="false">
               </figure>
               <figure class="fade-up">
-                <img src="./assets/img/person-four.png" alt="Person Four" draggable="false">
+                <img src="./assets/img/person-four.png" alt="Ilustração de uma pessoa 4" draggable="false">
               </figure>
               <figure class="fade-up">
-                <img src="./assets/img/person-five.png" alt="Person Five" draggable="false">
+                <img src="./assets/img/person-five.png" alt="Ilustração de uma pessoa 5" draggable="false">
               </figure>
               <figure class="fade-up">
-                <img src="./assets/img/person-six.png" alt="Person Six" draggable="false">
+                <img src="./assets/img/person-six.png" alt="Ilustração de uma pessoa 6" draggable="false">
               </figure>
             </div>
           </div>
-        </main>
+        </div>
       </section>
     </aside>
-    <aside class="main-aside">
-      <header class="header">
+    <aside class="login-aside">
+      <header class="login-header">
         <div class="fade-down">
           <p>Bem-vindo de volta</p>
         </div>
@@ -70,21 +71,23 @@
           <h1>Faça login na sua conta</h1>
         </div>
       </header>
-      <main class="main">
-        <section class="main-content">
-          <form class="form">
-            <div class="input-box">
-              <div class="fade-down">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Seu melhor email..." autocomplete="true"
-                  required>
+      <section class="login-main">
+        <div class="login-main-content">
+          <form class="login-form">
+            <fieldset>
+              <div class="input-box">
+                <div class="fade-down">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" placeholder="Seu melhor email..." autocomplete="true"
+                    required>
+                </div>
+                <div class="fade-down">
+                  <label for="password">Senha</label>
+                  <input type="password" name="password" id="password" placeholder="Sua senha..." autocomplete="true"
+                    required>
+                </div>
               </div>
-              <div class="fade-down">
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password" placeholder="Sua senha..." autocomplete="true"
-                  required>
-              </div>
-            </div>
+            </fieldset>
             <div class="remember-container">
               <div class="remember">
                 <div class="check-box fade-up">
@@ -99,21 +102,21 @@
             <div class="button-box">
               <button class="enter-button disabled fade-up" type="submit">Entrar na conta</button>
               <button class="google-button fade-up" type="button">
-                <img src="./assets/img/google-icon.svg" alt="Google Icon" draggable="false"> Ou faça login com o Google
+                <img src="./assets/img/google-icon.svg" alt="Ícone do Google" draggable="false"> Ou faça login com o
+                Google
               </button>
             </div>
           </form>
-        </section>
-      </main>
-      <footer class="footer fade-up">
-        <section class="footer-content">
+        </div>
+      </section>
+      <footer class="login-footer fade-up">
+        <section class="login-footer-content">
           <p>Não tem uma conta?</p>
           <a class="link-animation" href="/">Cadastre-se</a>
         </section>
       </footer>
     </aside>
-  </section>
-  <script src="./assets/js/script.js"></script>
+  </main>
 </body>
 
 </html>

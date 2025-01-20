@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-y: hidden;
+}
+
 ::selection {
   background-color: #e9f035;
   color: #1a202c;
@@ -93,34 +97,34 @@ html {
 
 .content {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.ilustration-aside {
+.illustration-aside {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   background-color: #1b1d1e;
   display: grid;
   place-items: center;
 }
 
 @media only screen and (width <=768px) {
-  .ilustration-aside {
+  .illustration-aside {
     display: none;
   }
 }
 
-.ilustration {
+.illustration {
   width: 100%;
   height: 100%;
   display: grid;
   place-items: center;
 }
 
-.ilustration-content {
+.illustration-content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -129,7 +133,7 @@ html {
   justify-content: center;
 }
 
-.ilustration-header {
+.illustration-header {
   width: 60%;
   height: 5%;
   border-bottom: 0.1rem solid #272b2c;
@@ -139,12 +143,12 @@ html {
 }
 
 @media only screen and (width <=1024px) {
-  .ilustration-header {
+  .illustration-header {
     width: 90%;
   }
 }
 
-.dots {
+.header-dots {
   width: 22%;
   height: 40%;
   padding-left: 0.5rem;
@@ -152,17 +156,17 @@ html {
   align-items: center;
 }
 
-.dots span {
+.header-dots span {
   width: 100%;
   height: 100%;
   transition: all 0.3s ease;
 }
 
-.dots span:hover {
+.header-dots span:hover {
   transform: translateY(-.4rem);
 }
 
-.dots span::before {
+.header-dots span::before {
   content: "";
   display: block;
   width: 1rem;
@@ -261,12 +265,12 @@ html {
   }
 }
 
-.persons {
+.persons-box {
   width: 100%;
   height: 30%;
 }
 
-.person-box {
+.persons-content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -274,7 +278,7 @@ html {
   align-items: center;
 }
 
-.person {
+.persons {
   width: 50%;
   height: 100%;
   display: grid;
@@ -283,7 +287,7 @@ html {
   row-gap: 1rem;
 }
 
-.person figure {
+.persons figure {
   width: 5rem;
   height: 5rem;
   display: flex;
@@ -296,13 +300,13 @@ html {
   animation-duration: 3s;
 }
 
-.person figure:nth-child(4),
-.person figure:nth-child(5),
-.person figure:nth-child(6) {
+.persons figure:nth-child(4),
+.persons figure:nth-child(5),
+.persons figure:nth-child(6) {
   animation-duration: 4s;
 }
 
-.person figure img {
+.persons figure img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -310,22 +314,22 @@ html {
   transition: all 0.3s ease;
 }
 
-.person figure:hover img {
+.persons figure:hover img {
   transform: scale(1.1);
 }
 
-.person figure:nth-child(2) img {
+.persons figure:nth-child(2) img {
   width: 120%;
   height: 120%;
 }
 
 @media only screen and (width <=1024px) {
-  .person {
+  .persons {
     width: 100%;
   }
 }
 
-.main-aside {
+.login-aside {
   width: 50%;
   height: 100vh;
   display: flex;
@@ -336,12 +340,12 @@ html {
 }
 
 @media only screen and (width <=768px) {
-  .main-aside {
+  .login-aside {
     width: 100%;
   }
 }
 
-.header {
+.login-header {
   width: 100%;
   height: 50%;
   display: flex;
@@ -351,41 +355,41 @@ html {
   gap: 0.5rem;
 }
 
-.header div {
+.login-header div {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header div:nth-last-child(1) {
+.login-header div:nth-last-child(1) {
   animation-duration: 1.5s;
 }
 
-.header p {
+.login-header p {
   font: 500 1.25rem/1.375rem "Merriweather", sans-serif;
   color: #cacaca;
 }
 
-.header h1 {
+.login-header h1 {
   font: 600 2rem/2.1875rem "Merriweather", sans-serif;
   color: #cacaca;
 }
 
 @media only screen and (width <=1115px) {
-  .header section {
+  .login-header section {
     width: 90%;
   }
 }
 
 @media only screen and (width <=768px) {
-  .header {
+  .login-header {
     text-align: center;
     padding: 2rem 0;
   }
 }
 
-.main {
+.login-main {
   width: 100%;
   height: 100%;
   display: flex;
@@ -396,28 +400,32 @@ html {
 }
 
 @media only screen and (width <=768px) {
-  .main {
+  .login-main {
     padding: 0;
   }
 }
 
-.main-content {
+.login-main-content {
   width: 50%;
   height: 100%;
 }
 
 @media only screen and (width <=1115px) {
-  .main-content {
+  .login-main-content {
     width: 90%;
   }
 }
 
-.form {
+.login-form {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+fieldset {
+  border: none;
 }
 
 .input-box {
@@ -597,7 +605,7 @@ html {
   background-color: #2d3748;
 }
 
-.footer {
+.login-footer {
   width: 100%;
   height: 40%;
   display: flex;
@@ -605,7 +613,7 @@ html {
   align-items: center;
 }
 
-.footer .footer-content {
+.login-footer .login-footer-content {
   width: 50%;
   display: flex;
   justify-content: space-between;
@@ -614,13 +622,13 @@ html {
   font: 500 1rem/1.36rem "Archivo", sans-serif;
 }
 
-.footer a {
+.login-footer a {
   color: #e9f035;
   text-decoration: none;
 }
 
 @media only screen and (width <=768px) {
-  .footer .footer-content {
+  .login-footer .login-footer-content {
     width: 90%;
   }
 }
